@@ -11,7 +11,7 @@ export class MyPipelineStack extends cdk.Stack {
       pipelineName: 'MyPipeline',
       synth: new ShellStep('Synth', {
         input: CodePipelineSource.connection('slungelongcobo/cdktest2', 'main', {connectionArn: 'arn:aws:codestar-connections:eu-west-1:065381300161:connection/615f1d1c-1af1-49ce-9bd7-81c62b51cec3'}),
-        commands: ['npm install -g aws-cdk', 'npm run build', 'npx cdk synth']
+        commands: ['npm install -g aws-cdk', 'npx cdk synth']
       })
     });
     
